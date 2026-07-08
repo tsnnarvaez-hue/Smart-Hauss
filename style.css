@@ -1,12 +1,13 @@
 /* ==========================================================================
-   🎨 PALETA DE COLORES PREMIUM (INSPIRADO EN SMART HAUSS)
+   ❄️ PALETA DE COLORES NÓRDICA (ESTILO INDUSTRIAL FRÍO)
    ========================================================================== */
 :root {
-    --color-dark-hauss: #121214;     /* Negro Mate / Grafito de fondo corporativo */
-    --color-gray-hauss: #1e1e22;     /* Gris para sub-elementos y menús */
-    --color-silver-metal: #cbd5e1;   /* Gris plata metálico para acentos y textos secundarios */
-    --color-silver-light: #f8fafc;   /* Fondo general de la web (muy limpio) */
-    --color-silver-line: #e2e8f0;    /* Líneas divisorias de precisión */
+    --color-dark-hauss: #0f172a;     /* Azul Profundo Nórdico (Sustituye al Negro Mate) */
+    --color-gray-hauss: #1e293b;     /* Azul Medianoche para sub-elementos o menús */
+    --color-ice-blue: #0ea5e9;       /* Azul Glacial Eléctrico para detalles técnicos e iconos */
+    --color-silver-metal: #94a3b8;   /* Gris plata metálico para textos secundarios */
+    --color-silver-light: #f1f5f9;   /* Fondo general de la web (muy limpio y frío) */
+    --color-silver-line: #cbd5e1;    /* Líneas divisorias de precisión */
     --color-blanco: #ffffff;
     --color-whatsapp: #25d366;       /* Color nativo para alta conversión */
     --color-whatsapp-hover: #1ebe57;
@@ -23,15 +24,15 @@ body {
 .bg-marino { background-color: var(--color-dark-hauss) !important; }
 .bg-plata { background-color: var(--color-silver-light) !important; }
 .text-marino { color: var(--color-dark-hauss) !important; }
-.text-rojo { color: var(--color-dark-hauss) !important; }
+.text-rojo { color: var(--color-ice-blue) !important; } /* Ahora los acentos viejos brillan en azul glacial */
 .border-marino { border-color: var(--color-dark-hauss) !important; }
 
 /* ==========================================================================
-   🖼️ SOLUCIÓN: CORRECCIÓN DE LA IMAGEN PRINCIPAL (BANNER HERO)
+   🖼️ BANNER PRINCIPAL (HERO) CON FILTRO FRÍO
    ========================================================================== */
 .hero-section {
-    /* Gradiente oscuro traslúcido para que la foto se vea nítida pero el texto sea legible */
-    background: linear-gradient(rgba(18, 18, 20, 0.75), rgba(18, 18, 20, 0.85)), 
+    /* Gradiente azul traslúcido para dar atmósfera de climatización */
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), 
                 url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200') no-repeat center center/cover;
     height: 75vh;
 }
@@ -44,36 +45,42 @@ body {
 
 .bg-white-opacity {
     background-color: transparent;
-    border-left: 3px solid var(--color-silver-metal);
+    border-left: 3px solid var(--color-ice-blue); /* Línea de acento azul frío */
     padding-left: 15px;
     color: var(--color-silver-metal) !important;
 }
 
 /* ==========================================================================
-   🔳 REDISEÑO DE TARJETAS DE SERVICIO INDUSTRIAL
+   🔳 REDISEÑO DE TARJETAS DE SERVICIO (BORDES AZUL GLACIAL AL PASAR EL MOUSE)
    ========================================================================== */
 .card {
     border: 1px solid var(--color-silver-line) !important;
-    border-radius: 4px !important; /* Estilo recto, minimalista y arquitectónico */
+    border-radius: 4px !important;
     overflow: hidden;
     background-color: var(--color-blanco);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02) !important;
     transition: all 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06) !important;
-    border-color: var(--color-dark-hauss) !important;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08) !important;
+    border-color: var(--color-ice-blue) !important; /* Iluminación azul al posicionarse */
 }
 
-/* Encabezados de bloques de servicio en las páginas secundarias */
+/* Forzar que los iconos de las tarjetas principales usen el azul bonito */
+.card-body i.display-4 {
+    color: var(--color-ice-blue) !important;
+}
+
+/* Encabezados de bloques de servicio en las páginas de precios */
 .card .d-flex.align-items-center.mb-4 {
     background: var(--color-dark-hauss) !important;
     padding: 16px 20px;
     border-radius: 0px;
     color: var(--color-blanco) !important;
     margin-bottom: 20px !important;
+    border-left: 4px solid var(--color-ice-blue) !important; /* Detalle helado */
 }
 
 .card .d-flex.align-items-center.mb-4 h2 {
@@ -84,13 +91,13 @@ body {
 }
 
 .card .d-flex.align-items-center.mb-4 .bg-marino {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    color: var(--color-blanco) !important;
+    background-color: rgba(14, 165, 233, 0.15) !important; /* Fondo suave azul glacial para el icono */
+    color: var(--color-ice-blue) !important;
     border-radius: 4px;
 }
 
 /* ==========================================================================
-   📊 TABLAS DE PRECIOS PREMIUM
+   📊 TABLAS DE PRECIOS AZULADAS
    ========================================================================== */
 .table thead th {
     background-color: var(--color-gray-hauss) !important;
@@ -99,16 +106,16 @@ body {
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 1px;
-    border-bottom: 2px solid var(--color-dark-hauss) !important;
+    border-bottom: 2px solid var(--color-ice-blue) !important; /* Línea helada divisoria */
     padding: 14px 15px !important;
 }
 
 .table-hover tbody tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: rgba(15, 23, 42, 0.01);
 }
 
 .table-hover tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(14, 165, 233, 0.05); /* Resaltado sutil color hielo */
 }
 
 .table td {
@@ -117,8 +124,9 @@ body {
 }
 
 /* ==========================================================================
-   🎛️ BOTONES MATE DE ALTA GAMA
+   🎛️ BOTONES SÓLIDOS Y DE CONTORNO
    ========================================================================== */
+/* Botón Principal Azul Profundo */
 .btn-rojo {
     background-color: var(--color-dark-hauss) !important;
     border-color: var(--color-dark-hauss) !important;
@@ -126,12 +134,14 @@ body {
     font-weight: 600;
     border-radius: 4px;
     letter-spacing: 0.5px;
+    transition: all 0.2s ease;
 }
 .btn-rojo:hover {
-    background-color: var(--color-gray-hauss) !important;
-    border-color: var(--color-gray-hauss) !important;
+    background-color: var(--color-ice-blue) !important;
+    border-color: var(--color-ice-blue) !important;
 }
 
+/* Botón Tecnológico con Contorno */
 .btn-outline-marino {
     color: var(--color-dark-hauss) !important;
     border: 1px solid var(--color-dark-hauss) !important;
@@ -143,13 +153,14 @@ body {
 .btn-outline-marino:hover {
     color: var(--color-blanco) !important;
     background-color: var(--color-dark-hauss) !important;
+    border-color: var(--color-dark-hauss) !important;
 }
 
-/* Botón Inmediato de WhatsApp */
+/* Botón de Acción Principal (WhatsApp Integrado) */
 .btn-whatsapp {
-    background-color: var(--color-dark-hauss) !important; /* Estilo Smart Hauss unificado */
+    background-color: var(--color-dark-hauss) !important;
     color: var(--color-blanco) !important;
-    border: 1px solid var(--color-silver-line) !important;
+    border: 1px solid var(--color-ice-blue) !important; /* Borde brillante */
     font-weight: 600 !important;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -157,27 +168,26 @@ body {
     transition: all 0.3s ease;
 }
 .btn-whatsapp:hover {
-    background-color: var(--color-whatsapp) !important; /* Se ilumina en verde al interactuar */
+    background-color: var(--color-whatsapp) !important; /* Iluminación verde nativa al tocarlo */
     border-color: var(--color-whatsapp) !important;
 }
 
 /* ==========================================================================
-   🌐 SECCIÓN SOCIALES Y FLOTANTE
+   🌐 SECCIÓN SOCIALES Y ELEMENTOS FLOTANTES
    ========================================================================== */
 .card-social {
     border: 1px solid var(--color-silver-line) !important;
     border-radius: 4px !important;
 }
 .card-social:hover {
-    border-color: var(--color-dark-hauss) !important;
+    border-color: var(--color-ice-blue) !important;
     transform: translateY(-4px);
 }
 .border-whatsapp, .border-instagram, .border-tiktok { border-top: 1px solid var(--color-silver-line) !important; }
-.text-whatsapp { color: var(--color-dark-hauss) !important; }
-.text-instagram { color: var(--color-dark-hauss) !important; }
-.text-tiktok { color: var(--color-dark-hauss) !important; }
-.bg-whatsapp-light, .bg-instagram-light, .bg-tiktok-light { background-color: var(--color-silver-light) !important; border-radius: 4px; }
+.text-whatsapp, .text-instagram, .text-tiktok { color: var(--color-dark-hauss) !important; }
+.bg-whatsapp-light, .bg-instagram-light, .bg-tiktok-light { background-color: var(--color-silver-light) !important; }
 
+/* Botón flotante inteligente */
 .whatsapp-float {
     position: fixed;
     width: 55px;
@@ -193,12 +203,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.3);
+    border: 1px solid rgba(14, 165, 233, 0.3);
 }
-.whatsapp-float:hover { background-color: var(--color-whatsapp); color: #fff; }
+.whatsapp-float:hover { background-color: var(--color-whatsapp); border-color: var(--color-whatsapp); }
 
 /* ==========================================================================
-   📱 RESPONSIVE (MÓVILES)
+   📱 ADAPTACIÓN PARA MÓVILES
    ========================================================================== */
 @media (max-width: 768px) {
     .hero-section { height: auto !important; padding: 60px 0 !important; }
