@@ -56,3 +56,59 @@
 .max-width-600 {
     max-width: 600px;
 }
+/* ==========================================================================
+   🔧 OPTIMIZACIONES EXCLUSIVAS PARA CELULARES (DISEÑO RESPONSIVE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. Ajustar la sección principal (Hero) para que no ocupe tanta pantalla */
+    .hero-section {
+        height: auto !important;
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem !important; /* Texto más cómodo para leer en vertical */
+    }
+
+    .hero-section p.lead {
+        font-size: 1rem !important;
+    }
+
+    /* 2. Controlar los botones para que no se encimen y sean fáciles de tocar con el pulgar */
+    .hero-section .btn {
+        width: 100% !important;
+        margin-bottom: 12px !important;
+        margin-right: 0 !important;
+    }
+
+    /* 3. Evitar que las tablas rompan la pantalla (Fuerza el deslizamiento interno) */
+    .table-responsive {
+        border-radius: 8px;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch; /* Suaviza el scroll con el dedo en iPhone/Android */
+        margin-bottom: 1.5rem;
+    }
+
+    .table th, .table td {
+        font-size: 0.85rem !important; /* Letra un poco más pequeña para que quepa más info */
+        padding: 10px 8px !important;
+    }
+
+    /* 4. Mejorar el espaciado de los títulos en secciones */
+    h2.display-5, h2.text-center {
+        font-size: 1.6rem !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* 5. Ajustar el botón flotante de WhatsApp para que no tape contenido importante abajo */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 28px;
+    }
+}
