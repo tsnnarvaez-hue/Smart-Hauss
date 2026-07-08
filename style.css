@@ -43,3 +43,16 @@
     background-color: #20ba5a;
     color: #fff;
 }
+/* Estilos para las tablas de servicios */
+.table thead.table-dark {
+    background-color: var(--color-marino) !important;
+    border-bottom: 3px solid var(--color-rojo);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(10, 31, 68, 0.03);
+}
+
+.max-width-600 {
+    max-width: 600px;
+}
